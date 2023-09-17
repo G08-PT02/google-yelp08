@@ -1,0 +1,18 @@
+
+segun maico podemos dejar unas 10000 reviews en un "bucker" o disco en la nube que luego se vuelque en el datawarehouse. Cuando se detecte que hay nuevos archivos, se acciona algunos scripts que transforman y cargan los nuevos datos y eso se reflejaria ya transformado en el datawarehouse. Es una de las maneras que tenemos para encarar la automatizcion de datos.
+
+Con benja ir pensando en como vamos a hacer lo de la automatizacion, organizarnos para que el transforme algunos datos y yo otros. Cranear el diseño del data warehouse, maico recomendo algo simple como el modelo estrella.
+
+airflow, https://www.mage.ai, https://www.shipyardapp.com
+
+
+
+*SUBIR MIS COSAS A MI RAMA(avisar cuando lo haga)
+
+*AYDUAR A BENJA A DEFINIR EL ALCANCE (periodos de tiempo (años), si vamos a concentrarnos en alguna cadena o comida en particular)
+
+*INVESTIGAR SOBRE LAS OPCIONES PARA LA AUTOMATIZACION PARA DEFINIR EL STACK TECNOLOGICO
+
+*YO ME DEDICO A YELPS Y BENJA A GOOGLE
+
+*CUANOD TRABAJE LOS DATOS PENSAR EN LOS KPIs
