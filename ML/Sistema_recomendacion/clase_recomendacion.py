@@ -7,7 +7,7 @@ import math
 
 class recomendacion:
     def __init__(self):
-        spacy.cli.download("en_core_web_md")
+        self.nlp_en = spacy.load("en_core_web_md")
         spacy.cli.download("en_core_web_sm")
         spacy.cli.download("es_core_news_sm")
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credencial.json"
@@ -58,8 +58,8 @@ class recomendacion:
                 similitudes = []
                 for palabra_busqueda in lista_busqueda:
                     # Calcular la similitud coseno entre los embeddings de las palabras
-                    embedding_palabra = nlp_en(palabra).vector.reshape(1, -1)
-                    embedding_palabra_busqueda = nlp_en(palabra_busqueda).vector.reshape(1, -1)
+                    embedding_palabra = self.nlp_en(palabra).vector.reshape(1, -1)
+                    embedding_palabra_busqueda = self.nlp_en(palabra_busqueda).vector.reshape(1, -1)
                     similitud = cosine_similarity(embedding_palabra, embedding_palabra_busqueda)[0][0]
                     similitudes.append(similitud)
                 
