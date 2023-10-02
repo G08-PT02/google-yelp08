@@ -4,6 +4,7 @@ import spacy
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 import math
+import numpy as np
 
 class recomendacion:
     def __init__(self):
@@ -50,23 +51,23 @@ class recomendacion:
 
         return palabras_clave
 
-    def buscar_palabras(self,df, columna, lista_busqueda, umbral_similitud=0.7):
+    def buscar_palabras_similares(self,dataframe, columna, lista_busqueda, umbral_similitud=0.7):
         indices = []
 
-        for index,lista in enumerate(df[columna]):
-            for palabra in lista:
-                similitudes = []
-                for palabra_busqueda in lista_busqueda:
-                    # Calcular la similitud coseno entre los embeddings de las palabras
-                    embedding_palabra = self.nlp_en(palabra).vector.reshape(1, -1)
-                    embedding_palabra_busqueda = self.nlp_en(palabra_busqueda).vector.reshape(1, -1)
-                    similitud = cosine_similarity(embedding_palabra, embedding_palabra_busqueda)[0][0]
-                    similitudes.append(similitud)
-                
-                # Si la similitud es mayor que el umbral, agregar la palabra
-                if max(similitudes) >= umbral_similitud:
-                    indices.append(index)
-                    break
+        # Calcular embeddings para las palabras de la lista de búsqueda
+        embeddings_busqueda = np.array([self.nlp_en(palabra).vector for palabra in lista_busqueda])
+
+        for index, palabras_lista in enumerate(dataframe[columna]):
+            # Calcular embeddings para las palabras de la lista actual
+            embeddings_lista = np.array([self.nlp_en(palabra).vector for palabra in palabras_lista])
+            
+            # Calcular la similitud coseno entre los embeddings de las palabras de la lista actual y las de búsqueda
+            similitudes = cosine_similarity(embeddings_lista, embeddings_busqueda).max(axis=1)
+            
+            # Si la similitud es mayor que el umbral, agregar el índice
+            if np.any(similitudes >= umbral_similitud):
+                indices.append(index)
+
         return indices
     
     def distancia(self,user_location, restaurant_location):
