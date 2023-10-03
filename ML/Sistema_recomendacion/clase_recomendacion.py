@@ -13,6 +13,17 @@ class recomendacion:
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credencial.json"
         self.df = self.consulta()
 
+    def load_model(model_name): 
+        # Intenta cargar el modelo
+        try:
+            nlp = spacy.load(model_name)
+            return nlp
+        except OSError:
+            print(f"El modelo {model_name} no está instalado. Descargando e instalando...")
+            spacy.cli.download(model_name)
+            nlp = spacy.load(model_name)
+            return nlp
+
     def consulta(self):
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "../credencial.json"
 
