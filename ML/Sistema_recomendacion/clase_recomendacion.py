@@ -8,13 +8,12 @@ import numpy as np
 
 class recomendacion:
     def __init__(self):
-        self.nlp_en = spacy.load("en_core_web_md")
-        spacy.cli.download("en_core_web_sm")
-        spacy.cli.download("es_core_news_sm")
-        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credencial.json"
-        self.df = self.consulta()
+        self.nlp_en = self.load_model("en_core_web_md")
+        #os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credencial.json"
+        #self.df = self.consulta()
+        self.df = pd.read_pickle('Rest_final_ML.pickle')
 
-    def load_model(model_name): 
+    def load_model(self,model_name): 
         # Intenta cargar el modelo
         try:
             nlp = spacy.load(model_name)
@@ -25,9 +24,7 @@ class recomendacion:
             nlp = spacy.load(model_name)
             return nlp
 
-    def consulta(self):
-        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "../credencial.json"
-
+    def query(self):
         client = bigquery.Client()
 
         query = f"""
@@ -45,43 +42,31 @@ class recomendacion:
         results_df = pd.DataFrame(data=[list(x.values()) for x in rows], columns=list(rows[0].keys()))
         return results_df
     
-    def palabras_clave(self,texto, idioma):
-        # Cargar el modelo de spaCy según el idioma
-        if idioma == "es":
-            nlp = spacy.load("es_core_news_sm")
-        elif idioma == "en":
-            nlp = spacy.load("en_core_web_sm")
-        else:
-            raise ValueError("Idioma no compatible. Usa 'es' para español o 'en' para inglés.")
-
+    def keywords(self,text):
         # Procesar el texto con spaCy
-        doc = nlp(texto)
+        doc = self.nlp_en(text)
 
         # Extraer sustantivos (nombres) y adjetivos
         palabras_clave = [token.text for token in doc if token.pos_ in ['NOUN', 'ADJ']]
 
         return palabras_clave
 
-    def buscar_palabras_similares(self,dataframe, columna, lista_busqueda, umbral_similitud=0.7):
+    def search(self,lista_busqueda, umbral_similitud=0.7):
         indices = []
-
-        # Calcular embeddings para las palabras de la lista de búsqueda
         embeddings_busqueda = np.array([self.nlp_en(palabra).vector for palabra in lista_busqueda])
 
-        for index, palabras_lista in enumerate(dataframe[columna]):
-            # Calcular embeddings para las palabras de la lista actual
-            embeddings_lista = np.array([self.nlp_en(palabra).vector for palabra in palabras_lista])
-            
-            # Calcular la similitud coseno entre los embeddings de las palabras de la lista actual y las de búsqueda
-            similitudes = cosine_similarity(embeddings_lista, embeddings_busqueda).max(axis=1)
-            
-            # Si la similitud es mayor que el umbral, agregar el índice
-            if np.any(similitudes >= umbral_similitud):
-                indices.append(index)
+        for index, embedding in enumerate(self.df['embedding']):
+            if embedding is not None:
+                # Calcular la similitud coseno solo si el embedding es válido (no es None)
+                similitudes = cosine_similarity(embedding, embeddings_busqueda).max(axis=1)
+                
+                # Si la similitud es mayor que el umbral, agregar el índice
+                if np.any(similitudes >= umbral_similitud):
+                    indices.append(index)
 
         return indices
     
-    def distancia(self,user_location, restaurant_location):
+    def distance(self,user_location, restaurant_location):
         # Extraer las coordenadas de latitud y longitud del usuario y del restaurante
         user_lat, user_lon = user_location
         restaurant_lat, restaurant_lon = restaurant_location
@@ -107,4 +92,11 @@ class recomendacion:
         distance = R * c
 
         return distance
-
+    
+    def main(self,text,coord,limit=5):
+        keywords = self.keywords(text)
+        indices = self.search(keywords)
+        df_recom = self.df.iloc[indices].reset_index()
+        df_recom['distance'] = df_recom.apply(lambda row: self.distance(coord, row['coord']), axis=1)
+        df_recom = df_recom.sort_values(by='distance', ascending=True).reset_index().head(limit)
+        return df_recom[['name','address','distance']]
