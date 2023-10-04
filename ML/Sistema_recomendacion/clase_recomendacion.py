@@ -11,7 +11,7 @@ class recomendacion:
         self.nlp_en = self.load_model("en_core_web_md")
         #os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credencial.json"
         #self.df = self.consulta()
-        self.df = pd.read_pickle('Rest_final_ML.pickle')
+        self.df = pd.read_pickle('../Datasets_ML/Rest_final_ML.pickle')
 
     def load_model(self,model_name): 
         # Intenta cargar el modelo
