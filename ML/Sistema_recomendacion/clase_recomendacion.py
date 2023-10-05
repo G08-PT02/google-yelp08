@@ -44,12 +44,13 @@ class recomendacion:
     
     def keywords(self,text):
         # Procesar el texto con spaCy
-        doc = self.nlp_en(text)
-
-        # Extraer sustantivos (nombres) y adjetivos
-        palabras_clave = [token.text for token in doc if token.pos_ in ['NOUN', 'ADJ']]
-
-        return palabras_clave
+        if len(text.split()) == 1:
+            return [text]
+        else:
+            doc = self.nlp_en(text)
+            # Extraer sustantivos (nombres) y adjetivos
+            palabras_clave = [token.text for token in doc if token.pos_ in ['NOUN', 'ADJ']]
+            return palabras_clave
 
     def search(self,lista_busqueda, umbral_similitud=0.7):
         indices = []
@@ -97,6 +98,6 @@ class recomendacion:
         keywords = self.keywords(text)
         indices = self.search(keywords)
         df_recom = self.df.iloc[indices].reset_index()
-        df_recom['distance'] = df_recom.apply(lambda row: self.distance(coord, row['coord']), axis=1)
+        df_recom['distance'] = df_recom.apply(lambda row: round(self.distance(coord, row['coord']),2), axis=1)
         df_recom = df_recom.sort_values(by='distance', ascending=True).reset_index().head(limit)
         return df_recom[['name','address','distance']]
