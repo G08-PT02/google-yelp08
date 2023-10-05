@@ -1,4 +1,5 @@
 from google.cloud import bigquery
+import os
 import spacy
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
