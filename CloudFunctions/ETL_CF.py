@@ -163,6 +163,8 @@ def etl(event, context):
             Datos_Geograficos.drop(columns=['address','Nombre'],inplace=True)
             Datos_Geograficos.fillna("dato desconocido", inplace=True)
             Datos_Geograficos.rename(columns={'Direccion': 'address'}, inplace=True)
+            States = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'Ml', 'MN', 'MO', 'MS', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
+            Datos_Geograficos=Datos_Geograficos[Datos_Geograficos['state'].isin(States)]
 
             #Horarios
             Horarios['hours'].fillna("[['Thursday', 'Sin Dato'], ['Friday', 'Sin Dato'], ['Saturday', 'Sin Dato'], ['Sunday', 'Sin Dato'], ['Monday', 'Sin Dato'],['Tuesday', 'Sin Dato'], ['Wednesday', 'Sin Dato']]", inplace=True)
