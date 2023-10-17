@@ -29,6 +29,7 @@ Para la creación de la interfaz de usuario (frontend) se optó por utilizar Das
 
 - Python: Lenguaje principal para el desarrollo del backend.
 - Numpy: Utilizado para cálculos y manipulaciones de datos.
+- Nominatim: Biblioteca utilizada para transformar direcciones textuales en coordenadas geograficas.
 - Dash: Herramienta escogida para el diseño de la interfaz de usuario.
 - Google Cloud VM: Servicio utilizado para el despliegue de la aplicación.
 - Cloud Translation API: Permite la traducción en tiempo real de ciertos elementos.
@@ -62,7 +63,7 @@ La integración entre el frontend y el backend, específicamente con el modelo d
 
 - Tokenización: Posterior a la traducción, el input se tokeniza en palabras clave. Este proceso permite al sistema identificar y clasificar las preferencias del usuario de manera efectiva, facilitando así la generación de recomendaciones precisas.
 
-- Transformación de la Dirección: Paralelamente, la dirección proporcionada por el usuario se convierte en coordenadas geográficas. Para esto, se utiliza la bibilioteca . Esta herramienta es esencial para transformar direcciones textuales en tuplas de coordenadas, facilitando así la integración con sistemas de mapeo y recomendación basados en ubicación.
+- Transformación de la Dirección: Paralelamente, la dirección proporcionada por el usuario se convierte en coordenadas geográficas. Para esto, se utiliza la bibilioteca "Nominatim" . Esta herramienta es esencial para transformar direcciones textuales en tuplas de coordenadas, facilitando así la integración con sistemas de mapeo y recomendación basados en ubicación.
 
 - Consulta al Modelo de Recomendación: Con la entrada del usuario ya procesada y las coordenadas obtenidas, el sistema envia esta entrada al modelo de recomendación. Este modelo, entrenado con vastos datos, genera una lista de lugares o servicios que coinciden con las preferencias y la ubicación del usuario.
 
