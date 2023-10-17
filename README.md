@@ -20,6 +20,7 @@ Descripción breve del propósito del sistema y su importancia.
 # Tecnologías Utilizadas
 - CUDA : Procesamiento en paralelo con chips de la marca NVIDIA
 - NPL: Procesamiento de lenguaje natural con un modelo pre-entrenado
+- BigQuery: Servicio de análisis de datos completamente administrado por Google Cloud. Permite realizar consultas SQL en conjuntos de datos extensos y complejos para extraer información valiosa y facilitar la toma de decisiones informadas.
 
 ## Modelo de recomendacion
 - Python: Lenguaje principal para el desarrollo del backend.
