@@ -18,10 +18,16 @@ Este proyecto presenta una interfaz de usuario diseñada para interactuar con un
 Descripción breve del propósito del sistema y su importancia.
 
 # Tecnologías Utilizadas
+- CUDA : Procesamiento en paralelo con chips de la marca NVIDIA
+- NPL: Procesamiento de lenguaje natural con un modelo pre-entrenado
 
 ## Modelo de recomendacion
 - Python
-- ....
+- Numpy
+- Pandas
+- Pytorch
+- Math
+- sklearn
 
 ## Interfaz y despliegue
 
