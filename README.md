@@ -38,9 +38,17 @@ Para la creación de la interfaz de usuario (frontend) se optó por utilizar Das
 
 # Características de la Interfaz
 
-- Interacción Intuitiva: Herramientas y botones diseñados para una experiencia de usuario simple y clara.
-- Feedback Visual: Animaciones y transiciones que proporcionan feedback al usuario durante la interacción.
-(Adapta y agrega otras características que consideres relevantes)
+La interfaz de nuestra aplicación ha sido diseñada pensando en la simplicidad y eficiencia para el usuario. Con un diseño amigable y una disposición intuitiva, garantizamos una experiencia de usuario fluida y agradable.
+
+Características destacadas:
+
+- Bilingüe: Nuestra interfaz es accesible y brinda soporte en dos idiomas principales: inglés y español. Esto nos permite alcanzar a una audiencia más amplia y garantizar que más usuarios puedan interactuar cómodamente con nuestra plataforma.
+
+- Barra Lateral Deslizable: La barra lateral deslizable proporciona acceso directo a distintas secciones. Los usuarios pueden navegar fácilmente hacia los dashboards, acceder a nuestro repositorio en GitHub y contactarnos para cualquier consulta o comentario.
+
+- Recomendaciones Personalizadas: En el corazón de nuestra interfaz se encuentra el sistema de recomendación. Aquí, los usuarios reciben sugerencias específicas basadas en sus preferencias y necesidades. Estas recomendaciones no solo son precisas sino también relevantes para garantizar la satisfacción del usuario.
+
+- Integración con Google Maps: Para facilitar aún más la experiencia, hemos incorporado un iframe de Google Maps directamente en la interfaz. Esto permite a los usuarios obtener direcciones en tiempo real y saber cómo llegar a las ubicaciones recomendadas sin tener que abandonar la aplicación.
 
 # Integración con el Modelo de Recomendación
 
