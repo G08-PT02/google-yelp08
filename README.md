@@ -24,9 +24,9 @@ Por lo que se ha desarrollado una herramienta que utiliza técnicas de análisis
 
 Objetivos Específicos:
 
-1.- Identificar insights para la apertura de nuevas sucursales.
-2.- Identificar patrones de comportamiento de usuarios, factores clave en reseñas positivas y negativas, y tendencias para un sistema de recomendación de restaurantes.
-3.- 
+- 1.- Identificar insights para la apertura de nuevas sucursales.
+- 2.- Identificar patrones de comportamiento de usuarios, factores clave en - reseñas positivas y negativas, y tendencias para un sistema de recomendación de restaurantes.
+- 3.-
 
 Informe de Alcance y Limitaciones del Proyecto
 
@@ -36,6 +36,20 @@ El proyecto se ha centrado en el análisis de datos de reseñas de restaurantes 
 - CUDA : Procesamiento en paralelo con chips de la marca NVIDIA
 - NPL (Procesamiento Lenguaje Natural): Facilita a las máquinas entender y generar lenguaje humano.
 - BigQuery: Servicio de análisis de datos completamente administrado por Google Cloud. Permite realizar consultas SQL en conjuntos de datos extensos y complejos para extraer información valiosa y facilitar la toma de decisiones informadas.
+
+## Ingeniería de Datos
+
+Esta etapa comenzó con un tratamiento preliminar de datos que se puede consultar en los [Notebooks](./Notebooks/); paso esencial para garantizar que los datos estén limpios, bien estructurados y listos para su procesamiento y análisis. La etapa preliminar también permite identificar las características más relevantes para el objetivo del proyecto. Esto simplifica el pipeline al reducir la cantidad de datos que deben ser procesados y analizados en profundidad, lo que mejora la eficiencia y evita la inclusión de información redundante.
+
+Después para generar un pipeline se definió la arquitectura de Big Data, que está respaldada por la tecnología de GOOGLE CLOUD PLATFORM, junto con la organización de datos en CLOUD STORAGE, la automatización de tareas mediante CLOUD FUNCTIONS, y la explotación de datos a través de BIG QUERY, POWER BI y aplicaciones de MACHINE LEARNING, conforma una estrategia sólida y escalable para gestionar y analizar los extensos conjuntos de datos de [YELP](https://drive.google.com/drive/folders/1TI-SsMnZsNP6t930olEEWbBQdo_yuIZF) y [GOOGLE BUSINESS](https://drive.google.com/drive/folders/1Wf7YkxA0aHI3GpoHc9Nh8_scf5BbD4DA).
+
+![WorkFlow](./Imagenes/WorkFlow.png)
+
+La automatización de tareas se ha logrado mediante el uso de Cloud Functions. Se han desarrollado dos funciones programadas en Python:
+ 
+[ETL_CF](./CloudFunctions/ETL_CF.py): Esta función se encarga de ejecutar el proceso de Extracción, Transformación y Carga (ETL) de los datos, asegurando su adecuada preparación para su posterior análisis.
+ 
+[LOAD_CF](./CloudFunctions/LOAD_CF.py): Esta función se ocupa de importar los datos procesados desde el bucket que alberga los datos procesados hacia su almacenamiento en el Datawarehouse, el cual se realiza con Big Query.
 
 ## Modelo de recomendacion
 - Python: Lenguaje principal para el desarrollo del backend.
