@@ -23,14 +23,17 @@ Descripción breve del propósito del sistema y su importancia.
 - Python
 - ....
 
-## Interfaz
+## Interfaz y despliegue
 
-- Python
-- Numpy
-- Dash
-- Google Cloud VM
-- Cloud Traslation API
-- Google Maps JavaScrips API
+Para la creación de la interfaz de usuario (frontend) se optó por utilizar Dash, mientras que el backend se desarrolló principalmente en Python, haciendo uso de librerías como Numpy y diversas APIs de Google Cloud. El despliegue de la aplicación se realizó a través del servicio de virtualización de GCP. A continuación, se presenta un resumen de las principales herramientas y tecnologías implementadas:
+
+- Python: Lenguaje principal para el desarrollo del backend.
+- Numpy: Utilizado para cálculos y manipulaciones de datos.
+- Dash: Herramienta escogida para el diseño de la interfaz de usuario.
+- Google Cloud VM: Servicio utilizado para el despliegue de la aplicación.
+- Cloud Translation API: Permite la traducción en tiempo real de ciertos elementos.
+- Google Maps JavaScript API: Usada para integrar funcionalidades de mapas en la aplicación.
+- SCP (Secure Copy Protocol) para transferir archivos entre la máquina local y la VM.
 
 
 # Características de la Interfaz
