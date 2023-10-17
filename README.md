@@ -24,9 +24,9 @@ Por lo que se ha desarrollado una herramienta que utiliza técnicas de análisis
 
 Objetivos Específicos:
 
-1.- Identificar insights para la apertura de nuevas sucursales.
-2.- Identificar patrones de comportamiento de usuarios, factores clave en reseñas positivas y negativas, y tendencias para un sistema de recomendación de restaurantes.
-3.- 
+- 1.- Identificar insights para la apertura de nuevas sucursales.
+- 2.- Identificar patrones de comportamiento de usuarios, factores clave en - reseñas positivas y negativas, y tendencias para un sistema de recomendación de restaurantes.
+- 3.-
 
 Informe de Alcance y Limitaciones del Proyecto
 
