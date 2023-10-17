@@ -81,7 +81,7 @@ Ejecuta el archivo principal para iniciar la aplicación.
 
 # Contribuidores
 
-Tu nombre y cualquier otra persona que haya contribuido al proyecto.
+Matias da Silva - Interfaz, integracion con el modelo de recomendacion y deploy de la aplicacion. [LinkedIn](#https://www.linkedin.com/in/matiasdasilva92/)
 
 # Licencia
 
