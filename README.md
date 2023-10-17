@@ -8,8 +8,8 @@ Este proyecto presenta una interfaz de usuario diseñada para interactuar con un
 ## Tabla de Contenidos
 - [Descripción General](#descripcion-general)
 - [Tecnologías Utilizadas](#tecnologias-utilizadas)
-- Características de la Interfaz (#caracteristicas-de-la-interfaz)
-- Integración con el Modelo de Recomendación (#integracion-modelo-recomendacion)
+- [Características de la Interfaz](#caracteristicas-de-la-interfaz)
+- [Integración con el Modelo de Recomendación](#integracion-modelo-recomendacion)
 - Instrucciones de Instalación 
 - Contribuidores
 
