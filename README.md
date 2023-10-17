@@ -87,7 +87,7 @@ Ejecuta el archivo principal para iniciar la aplicación.
 
 # Contribuidores
 
-Matias da Silva - Interfaz, integracion con el modelo de recomendacion y deploy de la aplicacion. [LinkedIn](https://www.linkedin.com/in/matiasdasilva92/)
+Matias da Silva - Interfaz, integracion con el modelo de recomendacion y deploy de la aplicacion. [👉 LinkedIn](https://www.linkedin.com/in/matiasdasilva92/)
 
 # Licencia
 
