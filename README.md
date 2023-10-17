@@ -22,12 +22,12 @@ Descripción breve del propósito del sistema y su importancia.
 - NPL: Procesamiento de lenguaje natural con un modelo pre-entrenado
 
 ## Modelo de recomendacion
-- Python
-- Numpy
-- Pandas
-- Pytorch
-- Math
-- sklearn
+- Python: Lenguaje principal para el desarrollo del backend.
+- Numpy: Utilizado para cálculos y manipulaciones de datos.
+- Pandas: Es una librería de Python para trabajar con datos en forma de tablas flexibles llamadas DataFrames.
+- PyTorch: Framework de Python para aprendizaje profundo.
+- Math: Biblioteca de funciones matemáticas en Python.
+- scikit-learn (sklearn): Biblioteca de Python para aprendizaje automático y minería de datos con herramientas sencillas y eficientes para análisis predictivo y modelado estadístico.
 
 ## Interfaz y despliegue
 
@@ -88,6 +88,7 @@ Ejecuta el archivo principal para iniciar la aplicación.
 # Contribuidores
 
 - Interfaz, integracion con el modelo de recomendacion y deploy de la aplicacion - Matias da Silva  [👉 LinkedIn](https://www.linkedin.com/in/matiasdasilva92/)
+- Modelo de recomendacion, normalizacion de datos para el modelo - Guillermo Gallo Garcia  [👉 LinkedIn](https://www.linkedin.com/in/guillermo-patricio-gallo-garcia-0a3bb3bb/)
 
 # Licencia
 
