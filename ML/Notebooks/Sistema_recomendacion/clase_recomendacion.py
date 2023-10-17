@@ -99,4 +99,4 @@ class recomendacion:
         df_recom = self.df.iloc[indices].reset_index()
         df_recom['distance'] = df_recom.apply(lambda row: round(self.distance(coord, row['coord']),2), axis=1)
         df_recom = df_recom.sort_values(by='distance', ascending=True).reset_index().head(limit)
-        return df_recom[['name']]#,'address','distance']]
+        return df_recom[['name','address','distance','keywords']]
