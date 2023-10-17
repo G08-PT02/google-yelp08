@@ -52,7 +52,23 @@ Características destacadas:
 
 # Integración con el Modelo de Recomendación
 
-Breve descripción de cómo la interfaz del usuario se comunica con el modelo de recomendación para proporcionar resultados. Puedes hablar sobre cómo se envían los datos, cómo se procesan y cómo se muestran los resultados.
+La integración entre el frontend y el backend, específicamente con el modelo de recomendación, ha sido diseñada para ser fluida y eficiente, garantizando precisión y rapidez en las respuestas. A continuación, se detalla el proceso:
+
+- Ingreso de Datos por el Usuario: La interfaz permite al usuario ingresar sus preferencias o requisitos para una recomendación. Esta entrada se realiza a través de campos de texto en el frontend donde pueden detallar lo que desean, así como proporcionar su dirección actual.
+
+- Pre-procesamiento de Datos: Una vez recibido el input del usuario, el sistema inicia un proceso interno de transformación:
+
+- Traducción: Si el input del usuario está en un idioma diferente al inglés, la aplicación utiliza la Cloud Translation API para traducir la entrada al inglés. Esta traducción garantiza que el sistema pueda entender y procesar correctamente la solicitud del usuario.
+
+- Tokenización: Posterior a la traducción, el input se tokeniza en palabras clave. Este proceso permite al sistema identificar y clasificar las preferencias del usuario de manera efectiva, facilitando así la generación de recomendaciones precisas.
+
+- Transformación de la Dirección: Paralelamente, la dirección proporcionada por el usuario se convierte en coordenadas geográficas. Para esto, se utiliza la bibilioteca . Esta herramienta es esencial para transformar direcciones textuales en tuplas de coordenadas, facilitando así la integración con sistemas de mapeo y recomendación basados en ubicación.
+
+- Consulta al Modelo de Recomendación: Con la entrada del usuario ya procesada y las coordenadas obtenidas, el sistema envia esta entrada al modelo de recomendación. Este modelo, entrenado con vastos datos, genera una lista de lugares o servicios que coinciden con las preferencias y la ubicación del usuario.
+
+- Presentación de Resultados: Finalmente, las recomendaciones se presentan en la interfaz para que el usuario pueda visualizarlas, junto con opciones para ver cómo llegar a cada lugar recomendado gracias a la integración con Google Maps.
+
+Esta integración entre la interfaz y el modelo de recomendación garantiza que los usuarios reciban sugerencias personalizadas y relevantes, todo en tiempo real y con la máxima precisión posible.
 
 # Instrucciones de Instalación
 
