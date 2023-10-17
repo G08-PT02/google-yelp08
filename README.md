@@ -6,14 +6,15 @@ Repositorio de Proyecto Final de Data Science Grupo 08 PT02
 Este proyecto presenta una interfaz de usuario diseñada para interactuar con un modelo de recomendación. A través de esta interfaz, los usuarios pueden recibir recomendaciones basadas en diferentes criterios y parámetros que se ajusten a sus necesidades.
 
 ## Tabla de Contenidos
-- Descripción General (#descripcion-general)
-- Tecnologías Utilizadas (#tecnologias-utilizadas)
+- [Descripción General](#descripcion-general)
+- [Tecnologías Utilizadas](#tecnologias-utilizadas)
 - Características de la Interfaz (#caracteristicas-de-la-interfaz)
 - Integración con el Modelo de Recomendación (#integracion-modelo-recomendacion)
 - Instrucciones de Instalación 
 - Contribuidores
 
-Descripción General
+# Descripción General
+
 Descripción breve del propósito del sistema y su importancia.
 
 # Tecnologías Utilizadas
