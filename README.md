@@ -15,7 +15,22 @@ Este proyecto presenta una interfaz de usuario diseñada para interactuar con un
 
 # Descripción General
 
-Descripción breve del propósito del sistema y su importancia.
+Un grupo de inversores está interesado en realizar inversiones en el sector de comida rápida en Estados Unidos, y nos ha contratado para el análisis del mercado de restaurantes.
+
+Nuestro objetivo general es generar una herramienta para mostrar los resultados de la exploración del mercado con diferentes KPI’s que ayuden a la toma de decisiones en la inversión. 
+También a partir de técnicas de análisis de datos, llevar a cabo la evaluación de sentimientos de los consumidores y a su vez la implementación de un modelo de aprendizaje automático, en busca de mejorar la satisfacción del cliente, la retención y el rendimiento comercial.
+
+Por lo que se ha desarrollado una herramienta que utiliza técnicas de análisis de datos para presentar los resultados de la investigación sobre restaurantes de comida rápida en los Estados Unidos. El propósito de esta herramienta es evaluar el éxito de un negocio según su tipo, con el objetivo de mejorar la satisfacción del cliente, la retención de clientes y el rendimiento comercial al abrir nuevas sucursales o desarrollar nuevos negocios. Además, se ha implementado un modelo de aprendizaje automático para obtener nuevos datos con el mismo fin.
+
+Objetivos Específicos:
+
+1.- Identificar insights para la apertura de nuevas sucursales.
+2.- Identificar patrones de comportamiento de usuarios, factores clave en reseñas positivas y negativas, y tendencias para un sistema de recomendación de restaurantes.
+3.- 
+
+Informe de Alcance y Limitaciones del Proyecto
+
+El proyecto se ha centrado en el análisis de datos de reseñas de restaurantes ubicados en los Estados Unidos, obtenidos de las plataformas Google y Yelp. El período de análisis abarcó desde 2015 hasta 2021, con un enfoque especial en los restaurantes de la categoría "Fast Food". El propósito principal de este proyecto fue la identificación de relaciones en diferentes ciudades, con la finalidad de seleccionar la mejor cadena o tipo de restaurante dentro de la mencionada categoría, con miras a futuras inversiones.
 
 # Tecnologías Utilizadas
 
