@@ -12,7 +12,7 @@ def generate_cards(df,lat,lon):
     
         for index, row in df.iterrows():
 
-            maps_link = f"https://www.google.com/maps/embed/v1/directions?key=AIzaSyAl0MF0V7fkoJuFFvxpTE7JioPh3hL3KRU&origin={lat},{lon}&destination={row['lat']},{row['lon']}"
+            maps_link = f"https://www.google.com/maps/embed/v1/directions?key=API_KEY&origin={lat},{lon}&destination={row['lat']},{row['lon']}"
         
             card_content = [
                 html.H5(row['name'], className="card-title"),
