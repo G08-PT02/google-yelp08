@@ -1,9 +1,5 @@
-# google-yelp08
-Repositorio de Proyecto Final de Data Science Grupo 08 PT02
-
-# Sistema de Recomendación
-
-Este proyecto presenta una interfaz de usuario diseñada para interactuar con un modelo de recomendación. A través de esta interfaz, los usuarios pueden recibir recomendaciones basadas en diferentes criterios y parámetros que se ajusten a sus necesidades.
+# Proyecto Data Science
+![PDS](./Imagenes/GoldenBites.png)
 
 ## Tabla de Contenidos
 - [Descripción General](#descripción-general)
@@ -13,7 +9,7 @@ Este proyecto presenta una interfaz de usuario diseñada para interactuar con un
 - [Instrucciones de Instalación](#instrucciones-de-instalación) 
 - [Contribuidores](#contribuidores)
 
-# Descripción General
+## Descripción General
 
 Un grupo de inversores está interesado en realizar inversiones en el sector de comida rápida en Estados Unidos, y nos ha contratado para el análisis del mercado de restaurantes.
 
@@ -32,7 +28,7 @@ Informe de Alcance y Limitaciones del Proyecto
 
 El proyecto se ha centrado en el análisis de datos de reseñas de restaurantes ubicados en los Estados Unidos, obtenidos de las plataformas Google y Yelp. El período de análisis abarcó desde 2015 hasta 2021, con un enfoque especial en los restaurantes de la categoría "Fast Food". El propósito principal de este proyecto fue la identificación de relaciones en diferentes ciudades, con la finalidad de seleccionar la mejor cadena o tipo de restaurante dentro de la mencionada categoría, con miras a futuras inversiones.
 
-# Tecnologías Utilizadas
+## Tecnologías Utilizadas
 - CUDA : Procesamiento en paralelo con chips de la marca NVIDIA
 - NPL (Procesamiento Lenguaje Natural): Facilita a las máquinas entender y generar lenguaje humano.
 - BigQuery: Servicio de análisis de datos completamente administrado por Google Cloud. Permite realizar consultas SQL en conjuntos de datos extensos y complejos para extraer información valiosa y facilitar la toma de decisiones informadas.
@@ -51,7 +47,11 @@ La automatización de tareas se ha logrado mediante el uso de Cloud Functions. S
  
 [LOAD_CF](./CloudFunctions/LOAD_CF.py): Esta función se ocupa de importar los datos procesados desde el bucket que alberga los datos procesados hacia su almacenamiento en el Datawarehouse, el cual se realiza con Big Query.
 
-## Modelo de recomendacion
+## Sistema de Recomendación
+
+Este proyecto presenta una interfaz de usuario diseñada para interactuar con un modelo de recomendación. A través de esta interfaz, los usuarios pueden recibir recomendaciones basadas en diferentes criterios y parámetros que se ajusten a sus necesidades.
+
+### Modelo de recomendacion
 - Python: Lenguaje principal para el desarrollo del backend.
 - Numpy: Utilizado para cálculos y manipulaciones de datos.
 - Pandas: Es una librería de Python para trabajar con datos en forma de tablas flexibles llamadas DataFrames.
@@ -59,7 +59,7 @@ La automatización de tareas se ha logrado mediante el uso de Cloud Functions. S
 - Math: Biblioteca de funciones matemáticas en Python.
 - scikit-learn (sklearn): Biblioteca de Python para aprendizaje automático y minería de datos con herramientas sencillas y eficientes para análisis predictivo y modelado estadístico.
 
-## Interfaz y despliegue
+### Interfaz y despliegue
 
 Para la creación de la interfaz de usuario (frontend) se optó por utilizar Dash, mientras que el backend se desarrolló principalmente en Python, haciendo uso de librerías como Numpy y diversas APIs de Google Cloud. El despliegue de la aplicación se realizó a través del servicio de virtualización de GCP. A continuación, se presenta un resumen de las principales herramientas y tecnologías implementadas:
 
@@ -73,7 +73,7 @@ Para la creación de la interfaz de usuario (frontend) se optó por utilizar Das
 - SCP (Secure Copy Protocol) para transferir archivos entre la máquina local y la VM.
 
 
-# Características de la Interfaz
+### Características de la Interfaz
 
 La interfaz de nuestra aplicación ha sido diseñada pensando en la simplicidad y eficiencia para el usuario. Con un diseño amigable y una disposición intuitiva, garantizamos una experiencia de usuario fluida y agradable.
 
@@ -87,7 +87,7 @@ Características destacadas:
 
 - Integración con Google Maps: Para facilitar aún más la experiencia, hemos incorporado un iframe de Google Maps directamente en la interfaz. Esto permite a los usuarios obtener direcciones en tiempo real y saber cómo llegar a las ubicaciones recomendadas sin tener que abandonar la aplicación.
 
-# Integración con el Modelo de Recomendación
+### Integración con el Modelo de Recomendación
 
 La integración entre el frontend y el backend, específicamente con el modelo de recomendación, ha sido diseñada para ser fluida y eficiente, garantizando precisión y rapidez en las respuestas. A continuación, se detalla el proceso:
 
@@ -107,7 +107,7 @@ La integración entre el frontend y el backend, específicamente con el modelo d
 
 Esta integración entre la interfaz y el modelo de recomendación garantiza que los usuarios reciban sugerencias personalizadas y relevantes, todo en tiempo real y con la máxima precisión posible.
 
-# Instrucciones de Instalación
+### Instrucciones de Instalación
 
 Clona este repositorio en tu máquina local.
 Navega al directorio del proyecto.
@@ -120,7 +120,7 @@ Ejecuta el archivo principal para iniciar la aplicación.
 - Interfaz, integracion con el modelo de recomendacion y deploy de la aplicacion - Matias da Silva  [👉 LinkedIn](https://www.linkedin.com/in/matiasdasilva92/)
 - Modelo de recomendacion, normalizacion de datos para el modelo - Guillermo Gallo Garcia  [👉 LinkedIn](https://www.linkedin.com/in/guillermo-patricio-gallo-garcia-0a3bb3bb/)
 
-# Licencia
+### Licencia
 
 Especifica la licencia bajo la cual estás distribuyendo tu software. Puede ser una licencia de código abierto o cualquier otra que elijas.
 
