@@ -21,16 +21,21 @@ Objetivos Específicos:
 
 - 1.- Identificar insights para la apertura de nuevas sucursales.
 - 2.- Identificar patrones de comportamiento de usuarios, factores clave en - reseñas positivas y negativas, y tendencias para un sistema de recomendación de restaurantes.
-- 3.-
 
 Informe de Alcance y Limitaciones del Proyecto
 
 El proyecto se ha centrado en el análisis de datos de reseñas de restaurantes ubicados en los Estados Unidos, obtenidos de las plataformas Google y Yelp. El período de análisis abarcó desde 2015 hasta 2021, con un enfoque especial en los restaurantes de la categoría "Fast Food". El propósito principal de este proyecto fue la identificación de relaciones en diferentes ciudades, con la finalidad de seleccionar la mejor cadena o tipo de restaurante dentro de la mencionada categoría, con miras a futuras inversiones.
 
 ## Tecnologías Utilizadas
+
+- Jira: Una herramienta de gestión de proyectos y seguimiento de problemas desarrollada por Atlassian, utilizada para planificar, rastrear y gestionar el trabajo en equipo.
+- Python: Un lenguaje de programación ampliamente utilizado para desarrollo de aplicaciones, análisis de datos, automatización y más.
+- Google Cloud Storage: uso de "buckets" para almacenar y gestionar datos de manera escalable.
+- Google Cloud Function: Una función sin servidor en Google Cloud que te permite ejecutar código en respuesta a eventos, como cambios en los datos de Google Cloud Storage.
+- BigQuery: Servicio de análisis de datos completamente administrado por Google Cloud. Permite realizar consultas SQL en conjuntos de datos extensos y complejos para extraer información valiosa y facilitar la toma de decisiones informadas.
 - CUDA : Procesamiento en paralelo con chips de la marca NVIDIA
 - NPL (Procesamiento Lenguaje Natural): Facilita a las máquinas entender y generar lenguaje humano.
-- BigQuery: Servicio de análisis de datos completamente administrado por Google Cloud. Permite realizar consultas SQL en conjuntos de datos extensos y complejos para extraer información valiosa y facilitar la toma de decisiones informadas.
+- Power BI: Una herramienta de visualización de datos de Microsoft que permite crear informes interactivos y paneles de control a partir de datos empresariales.
 
 ## Ingeniería de Datos
 
