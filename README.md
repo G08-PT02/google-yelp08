@@ -108,11 +108,12 @@ Esta integración entre la interfaz y el modelo de recomendación garantiza que 
 
 ### Instrucciones de Instalación
 
-Clona este repositorio en tu máquina local.
-Navega al directorio del proyecto.
-Instala las dependencias necesarias (proporciona un archivo requirements.txt si es posible).
-Ejecuta el archivo principal para iniciar la aplicación.
-(Adapta estos pasos según tu configuración específica)
+- Clona este repositorio en una maquina virtual.
+- Es necesario agregar la API_KEY en el archivo "callbacks.py" y en "motor_recomendacion.py".
+- Navega al directorio del proyecto.
+- Instala las dependencias necesarias (Se proporciona el requeriments.txt).
+- Ejecuta el archivo principal para iniciar la aplicación(main.py).
+- Conectarse a la interfaz a traves de la IP.
 
 # Contribuidores
 - Ingeniería de Datos - Alejandro Núñez [👉 LinkedIn](https://www.linkedin.com/in/alejandro-n%C3%BA%C3%B1ez-guzm%C3%A1n-60b20a188/)
