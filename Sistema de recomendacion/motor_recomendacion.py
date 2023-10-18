@@ -98,7 +98,7 @@ class recomendacion:
     
     def main(self,text,coord,limit=5):
 
-        API_KEY = "AIzaSyAl0MF0V7fkoJuFFvxpTE7JioPh3hL3KRU"
+        API_KEY = "API_KEY"
         URL = "https://translation.googleapis.com/language/translate/v2"
 
         def translate_text(text, target_language="en"):
