@@ -52,6 +52,11 @@ La automatización de tareas se ha logrado mediante el uso de Cloud Functions. S
  
 [LOAD_CF](./CloudFunctions/LOAD_CF.py): Esta función se ocupa de importar los datos procesados desde el bucket que alberga los datos procesados hacia su almacenamiento en el Datawarehouse, el cual se realiza con Big Query.
 
+Con todo el proceso iterativo se llego al siguiente Diagrama de relación de tablas y que sus variables se explican en el [Reporte_de_Ingeniería](./Ingenieria_Datos/Reporte%20de%20Ingenier%C3%ADa%20de%20Datos.pdf).
+
+![DER](./Imagenes/DER.jpeg)
+ 
+
 ## Análisis de Datos
 
 El objetivo principal de este análisis de datos es proporcionar información crítica y relevante tanto para los inversionistas interesados en la apertura de restaurantes como para los usuarios que buscan restaurantes en una zona específica, usamos para el análisis de datos dataset de Google y Yelp alojados en un Data Warehouse de Google Bigquery y como herramienrta para la visualización Microsoft PowerBI
