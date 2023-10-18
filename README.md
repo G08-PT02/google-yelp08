@@ -174,7 +174,7 @@ Esta integración entre la interfaz y el modelo de recomendación garantiza que 
 
 # Contribuidores
 - Ingeniería de Datos - Alejandro Núñez [👉 LinkedIn](https://www.linkedin.com/in/alejandro-n%C3%BA%C3%B1ez-guzm%C3%A1n-60b20a188/)
-- Ingeniería de Datos - Enzo Fuentes [👉 LinkedIn](www.linkedin.com/in/enzofuentes)
+- Ingeniería de Datos - Enzo Fuentes [👉 LinkedIn](https://www.linkedin.com/in/enzofuentes)
 - Interfaz, integracion con el modelo de recomendacion y deploy de la aplicacion - Matias da Silva  [👉 LinkedIn](https://www.linkedin.com/in/matiasdasilva92/)
 - Modelo de recomendacion, normalizacion de datos para el modelo - Guillermo Gallo Garcia  [👉 LinkedIn](https://www.linkedin.com/in/guillermo-patricio-gallo-garcia-0a3bb3bb/)
 
