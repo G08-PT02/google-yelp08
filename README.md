@@ -4,9 +4,8 @@
 ## Tabla de Contenidos
 - [Descripción General](#descripción-general)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
-- [Características de la Interfaz](#características-de-la-interfaz)
-- [Integración con el Modelo de Recomendación](#integración-con-el-modelo-de-recomendación)
-- [Instrucciones de Instalación](#instrucciones-de-instalación) 
+- [Ingeniería de Datos](#ingeniería-de-datos)
+- [Sistema de Recomendación](#sistema-de-recomendación)
 - [Contribuidores](#contribuidores)
 
 ## Descripción General
@@ -116,7 +115,7 @@ Ejecuta el archivo principal para iniciar la aplicación.
 (Adapta estos pasos según tu configuración específica)
 
 # Contribuidores
-
+- Ingeniería de Datos - Alejandro Núñez [👉 LinkedIn](https://www.linkedin.com/in/alejandro-n%C3%BA%C3%B1ez-guzm%C3%A1n-60b20a188/)
 - Interfaz, integracion con el modelo de recomendacion y deploy de la aplicacion - Matias da Silva  [👉 LinkedIn](https://www.linkedin.com/in/matiasdasilva92/)
 - Modelo de recomendacion, normalizacion de datos para el modelo - Guillermo Gallo Garcia  [👉 LinkedIn](https://www.linkedin.com/in/guillermo-patricio-gallo-garcia-0a3bb3bb/)
 
