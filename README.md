@@ -5,6 +5,7 @@
 - [Descripción General](#descripción-general)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Ingeniería de Datos](#ingeniería-de-datos)
+- [Análisis de Datos](#análisis-de-datos)
 - [Sistema de Recomendación](#sistema-de-recomendación)
 - [Contribuidores](#contribuidores)
 
@@ -45,6 +46,53 @@ La automatización de tareas se ha logrado mediante el uso de Cloud Functions. S
 [ETL_CF](./CloudFunctions/ETL_CF.py): Esta función se encarga de ejecutar el proceso de Extracción, Transformación y Carga (ETL) de los datos, asegurando su adecuada preparación para su posterior análisis.
  
 [LOAD_CF](./CloudFunctions/LOAD_CF.py): Esta función se ocupa de importar los datos procesados desde el bucket que alberga los datos procesados hacia su almacenamiento en el Datawarehouse, el cual se realiza con Big Query.
+
+## Análisis de Datos
+
+El objetivo principal de este análisis de datos es proporcionar información crítica y relevante tanto para los inversionistas interesados en la apertura de restaurantes como para los usuarios que buscan restaurantes en una zona específica, usamos para el análisis de datos dataset de Google y Yelp alojados en un Data Warehouse de Google Bigquery y como herramienrta para la visualización Microsoft PowerBI
+
+## Dashboard
+
+### Beneficios para los inversionistas
+![Dashboard Inversionistas](./Imagenes/dashboard1.png)
+El análisis proporcionará a los inversionistas información valiosa para tomar decisiones informadas sobre la apertura de restaurantes. Los resultados del análisis ayudarán a los inversionistas a comprender mejor el mercado objetivo, las tendencias de la industria y la competencia.
+
+El análisis se centrará en los siguientes aspectos clave:
+
+- Competencia: Comprender el nivel de competencia en la zona y cómo se compara con la calidad de los restaurantes existentes.
+
+- Tendencias del Mercado: Identificar tendencias y patrones en la industria de restaurantes en la zona.
+
+- Competición de la industria: El análisis evaluará la competencia en la industria de los restaurantes, incluidos los tipos de restaurantes que operan en la zona.
+ 
+### Beneficios para los usuarios
+![Dashboard Inversionistas](./Imagenes/dashboard2.png)
+
+El análisis proporcionará a los usuarios información útil para tomar decisiones sobre dónde comer. Los resultados del análisis ayudarán a los usuarios a encontrar restaurantes que satisfagan sus necesidades y preferencias.
+
+Para Usuarios:
+Selección Informada: Ayudar a los usuarios a tomar decisiones informadas al elegir restaurantes, considerando factores como la calificación promedio, variedad de cocinas, precios y ubicación.
+
+- Experiencia del Cliente: Mejorar la experiencia del cliente al proporcionar información detallada sobre los restaurantes, incluyendo opiniones y reseñas de otros usuarios.
+
+- Accesibilidad y Proximidad: Facilitar la búsqueda de restaurantes cercanos a la ubicación del usuario.
+
+## Retos Técnicos del Análisis de Datos
+El análisis de datos en este proyecto enfrento varios desafíos técnicos para lograr sus objetivos, que fueron superados en conjunto con el equipo de Inegenieria de Datos:
+
+- Integración de Datos: La recopilación y la integración de datos de múltiples fuentes, como Google y Yelp, pueden ser complejas debido a diferencias en formatos y estructuras de datos.
+
+- Limpieza y Preprocesamiento: Los datos suelen contener errores, valores faltantes y redundancias que requieren una limpieza y preprocesamiento cuidadoso para garantizar la precisión de los resultados.
+
+- Análisis Geoespacial: La identificación de restaurantes y su ubicación geográfica precisa es fundamental para la evaluación de la proximidad y accesibilidad.
+
+- Visualización de Datos: La presentación efectiva de los KPIs en forma de tableros de control que sean fáciles de entender y utilizar tanto para inversionistas como para usuarios.
+
+- Actualización de Datos: Mantener los datos actualizados es esencial para garantizar que las decisiones se basen en información reciente.
+
+La superación de estos desafíos técnicos fue esencial para el éxito del proyecto y para brindar valor a los inversionistas y usuarios interesados en la industria de restaurantes en una ubicación específica.
+
+
 
 ## Sistema de Recomendación
 
