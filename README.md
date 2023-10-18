@@ -159,6 +159,10 @@ La integración entre el frontend y el backend, específicamente con el modelo d
 
 Esta integración entre la interfaz y el modelo de recomendación garantiza que los usuarios reciban sugerencias personalizadas y relevantes, todo en tiempo real y con la máxima precisión posible.
 
+### Video de funcionamiento
+
+[Ver el video](https://clipchamp.com/watch/Fu8v16wOlrX)
+
 ### Instrucciones de Instalación
 
 - Clona este repositorio en una maquina virtual.
