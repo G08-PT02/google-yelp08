@@ -1,5 +1,6 @@
 from google.cloud import bigquery
 import spacy
+import sklearn
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 import math
@@ -10,7 +11,7 @@ class recomendacion:
         self.nlp_en = self.load_model("en_core_web_md")
         #os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credencial.json"
         #self.df = self.consulta()
-        self.df = pd.read_pickle('../Datasets_ML/Rest_final_ML.pickle')
+        self.df = pd.read_pickle('../Datasets_ML/Rest_completo_ML.pickle')
 
     def load_model(self,model_name): 
         # Intenta cargar el modelo
@@ -51,20 +52,22 @@ class recomendacion:
             palabras_clave = [token.text for token in doc if token.pos_ in ['NOUN', 'ADJ']]
             return palabras_clave
 
-    def search(self,lista_busqueda, umbral_similitud=0.7):
-        indices = []
+    # Calcular la similitud coseno solo si el embedding es válido (no es None)
+    # Si la similitud es mayor que el umbral, agregar el índice
+    def search(self,lista_busqueda):
+        indice = []
+        similitud = []
         embeddings_busqueda = np.array([self.nlp_en(palabra).vector for palabra in lista_busqueda])
-
         for index, embedding in enumerate(self.df['embedding']):
             if embedding is not None:
-                # Calcular la similitud coseno solo si el embedding es válido (no es None)
-                similitudes = cosine_similarity(embedding, embeddings_busqueda).max(axis=1)
-                
-                # Si la similitud es mayor que el umbral, agregar el índice
-                if np.any(similitudes >= umbral_similitud):
-                    indices.append(index)
-
-        return indices
+                similitudes = np.mean(cosine_similarity(embedding, embeddings_busqueda))
+                indice.append(index)
+                similitud.append(similitudes)
+        df = pd.DataFrame({'indice': indice, 'similitud': similitud})
+        df = df.sort_values(by='similitud', ascending=False)
+        result = df['indice']
+        return result
+    
     
     def distance(self,user_location, restaurant_location):
         # Extraer las coordenadas de latitud y longitud del usuario y del restaurante
@@ -96,7 +99,14 @@ class recomendacion:
     def main(self,text,coord,limit=5):
         keywords = self.keywords(text)
         indices = self.search(keywords)
-        df_recom = self.df.iloc[indices].reset_index()
-        df_recom['distance'] = df_recom.apply(lambda row: round(self.distance(coord, row['coord']),2), axis=1)
-        df_recom = df_recom.sort_values(by='distance', ascending=True).reset_index().head(limit)
-        return df_recom[['name','address','distance','keywords']]
+        if len(indices) == 0:
+            return print('No se encontraron coincidencias')
+        else:
+            df_recom = self.df.iloc[indices]
+            df_recom = df_recom.head(limit)
+            df_recom['distance'] = df_recom.apply(lambda row: self.distance(coord, row['coord']),axis=1)
+            df_recom['distance'] = df_recom['distance'].round(2)
+            df_recom = df_recom.sort_values(by='distance', ascending=True).reset_index()
+            return df_recom[['name', 'address', 'distance']]
+    
+    
