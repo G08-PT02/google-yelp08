@@ -59,7 +59,7 @@ El objetivo principal de este análisis de datos es proporcionar información cr
 ## Dashboard
 
 ### Beneficios para los inversionistas
-![Dashboard Inversionistas](./Imagenes/dashboard1.png)
+![Dashboard Inversionistas](./Imagenes/Dashboard3.png)
 El análisis proporcionará a los inversionistas información valiosa para tomar decisiones informadas sobre la apertura de restaurantes. Los resultados del análisis ayudarán a los inversionistas a comprender mejor el mercado objetivo, las tendencias de la industria y la competencia.
 
 El análisis se centrará en los siguientes aspectos clave:
