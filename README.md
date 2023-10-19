@@ -52,6 +52,11 @@ La automatización de tareas se ha logrado mediante el uso de Cloud Functions. S
  
 [LOAD_CF](./CloudFunctions/LOAD_CF.py): Esta función se ocupa de importar los datos procesados desde el bucket que alberga los datos procesados hacia su almacenamiento en el Datawarehouse, el cual se realiza con Big Query.
 
+Con todo el proceso iterativo se llego al siguiente Diagrama de relación de tablas y que sus variables se explican en el [Reporte_de_Ingeniería](./Ingenieria_Datos/Reporte%20de%20Ingenier%C3%ADa%20de%20Datos.pdf).
+
+![DER](./Imagenes/DER.jpeg)
+ 
+
 ## Análisis de Datos
 
 El objetivo principal de este análisis de datos es proporcionar información crítica y relevante tanto para los inversionistas interesados en la apertura de restaurantes como para los usuarios que buscan restaurantes en una zona específica, usamos para el análisis de datos dataset de Google y Yelp alojados en un Data Warehouse de Google Bigquery y como herramienrta para la visualización Microsoft PowerBI
@@ -159,6 +164,10 @@ La integración entre el frontend y el backend, específicamente con el modelo d
 
 Esta integración entre la interfaz y el modelo de recomendación garantiza que los usuarios reciban sugerencias personalizadas y relevantes, todo en tiempo real y con la máxima precisión posible.
 
+### Video de funcionamiento
+
+[Ver el video](https://clipchamp.com/watch/Fu8v16wOlrX)
+
 ### Instrucciones de Instalación
 
 - Clona este repositorio en una maquina virtual.
@@ -170,6 +179,7 @@ Esta integración entre la interfaz y el modelo de recomendación garantiza que 
 
 # Contribuidores
 - Ingeniería de Datos - Alejandro Núñez [👉 LinkedIn](https://www.linkedin.com/in/alejandro-n%C3%BA%C3%B1ez-guzm%C3%A1n-60b20a188/)
+- Ingeniería de Datos - Enzo Fuentes [👉 LinkedIn](https://www.linkedin.com/in/enzofuentes)
 - Interfaz, integracion con el modelo de recomendacion y deploy de la aplicacion - Matias da Silva  [👉 LinkedIn](https://www.linkedin.com/in/matiasdasilva92/)
 - Modelo de recomendacion, normalizacion de datos para el modelo - Guillermo Gallo Garcia  [👉 LinkedIn](https://www.linkedin.com/in/guillermo-patricio-gallo-garcia-0a3bb3bb/)
 
